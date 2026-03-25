@@ -7,19 +7,19 @@ LABEL org.opencontainers.image.title="Valkey Cluster" \
       org.opencontainers.image.source="https://github.com/ercansormaz/docker-valkey-cluster" \
       org.opencontainers.image.documentation="https://github.com/ercansormaz/docker-valkey-cluster/blob/main/README.md" \
       org.opencontainers.image.licenses="MIT" \
-      org.opencontainers.image.version="8.6.2" \
-      org.opencontainers.image.ref.name="ercansormaz/valkey-cluster:8.6.2"
+      org.opencontainers.image.version="9.0.3" \
+      org.opencontainers.image.ref.name="ercansormaz/valkey-cluster:9.0.3"
 
 # Download create-cluster script from valkey repository
 ADD https://raw.githubusercontent.com/valkey-io/valkey/refs/tags/9.0.3/utils/create-cluster/create-cluster /usr/local/bin/create-cluster
 RUN chmod +x /usr/local/bin/create-cluster
 
 # Copy custom entrypoint script
-COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+COPY ../entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
 # Override create-cluster script settings
-COPY config.sh /data/config.sh
+COPY ../config.sh /data/config.sh
 
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 
