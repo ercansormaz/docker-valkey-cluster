@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-echo "Starting Redis Cluster..."
+echo "Starting Valkey Cluster..."
 
 /usr/local/bin/create-cluster start
 

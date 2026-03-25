@@ -1,17 +1,17 @@
-FROM redis:8.0.6
+FROM valkey/valkey:8.0.7
 
-LABEL org.opencontainers.image.title="Redis Cluster" \
-      org.opencontainers.image.description="A lightweight Redis cluster setup for local development and testing. Based on the official Redis image and includes the create-cluster utility." \
+LABEL org.opencontainers.image.title="Valkey Cluster" \
+      org.opencontainers.image.description="A lightweight Valkey cluster setup for local development and testing. Based on the official Valkey image and includes the create-cluster utility." \
       org.opencontainers.image.authors="Ercan SORMAZ <me@ercan.dev>" \
-      org.opencontainers.image.url="https://hub.docker.com/r/ercansormaz/redis-cluster" \
-      org.opencontainers.image.source="https://github.com/ercansormaz/docker-redis-cluster" \
-      org.opencontainers.image.documentation="https://github.com/ercansormaz/docker-redis-cluster/blob/main/README.md" \
+      org.opencontainers.image.url="https://hub.docker.com/r/ercansormaz/valkey-cluster" \
+      org.opencontainers.image.source="https://github.com/ercansormaz/docker-valkey-cluster" \
+      org.opencontainers.image.documentation="https://github.com/ercansormaz/docker-valkey-cluster/blob/main/README.md" \
       org.opencontainers.image.licenses="MIT" \
-      org.opencontainers.image.version="8.0.6" \
-      org.opencontainers.image.ref.name="ercansormaz/redis-cluster:8.0.6"
+      org.opencontainers.image.version="8.0.7" \
+      org.opencontainers.image.ref.name="ercansormaz/valkey-cluster:8.0.7"
 
-# Download create-cluster script from redis repository
-ADD https://raw.githubusercontent.com/redis/redis/refs/tags/8.0.6/utils/create-cluster/create-cluster /usr/local/bin/create-cluster
+# Download create-cluster script from valkey repository
+ADD https://raw.githubusercontent.com/valkey-io/valkey/refs/tags/8.0.7/utils/create-cluster/create-cluster /usr/local/bin/create-cluster
 RUN chmod +x /usr/local/bin/create-cluster
 
 # Copy custom entrypoint script
