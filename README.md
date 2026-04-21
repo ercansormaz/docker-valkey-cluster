@@ -1,7 +1,8 @@
 # 🧱 Valkey Cluster Docker Image
 
 This repository provides a **custom Valkey Cluster Docker image** based on the official Valkey source.  
-It is preconfigured to run a **6-node Valkey Cluster** (3 masters + 3 replicas) for local development or testing purposes.
+It is preconfigured to run a **6-node Valkey Cluster** (3 masters + 3 replicas) for local development or testing purposes.  
+Detailed documentation and updates can be found on the [official project page](https://ercan.dev/projects/valkey-cluster-docker-image).
 
 ---
 

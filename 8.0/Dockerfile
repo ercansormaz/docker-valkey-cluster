@@ -1,14 +1,14 @@
 FROM valkey/valkey:8.0.7
 
-LABEL org.opencontainers.image.title="Valkey Cluster" \
-      org.opencontainers.image.description="A lightweight Valkey cluster setup for local development and testing. Based on the official Valkey image and includes the create-cluster utility." \
-      org.opencontainers.image.authors="Ercan SORMAZ <me@ercan.dev>" \
-      org.opencontainers.image.url="https://hub.docker.com/r/ercansormaz/valkey-cluster" \
-      org.opencontainers.image.source="https://github.com/ercansormaz/docker-valkey-cluster" \
-      org.opencontainers.image.documentation="https://github.com/ercansormaz/docker-valkey-cluster/blob/main/README.md" \
-      org.opencontainers.image.licenses="MIT" \
-      org.opencontainers.image.version="8.0.7" \
-      org.opencontainers.image.ref.name="ercansormaz/valkey-cluster:8.0.7"
+LABEL org.opencontainers.image.title="Valkey Cluster"
+LABEL org.opencontainers.image.description="A lightweight Valkey cluster setup for local development and testing. Based on the official Valkey image and includes the create-cluster utility."
+LABEL org.opencontainers.image.vendor="Ercan SORMAZ"
+LABEL org.opencontainers.image.url="https://ercan.dev/projects/valkey-cluster-docker-image"
+LABEL org.opencontainers.image.source="https://github.com/ercansormaz/docker-valkey-cluster"
+LABEL org.opencontainers.image.documentation="https://github.com/ercansormaz/docker-valkey-cluster/blob/main/README.md"
+LABEL org.opencontainers.image.licenses="MIT"
+LABEL org.opencontainers.image.version="8.0.7"
+LABEL org.opencontainers.image.ref.name="ercansormaz/valkey-cluster:8.0.7"
 
 # Download create-cluster script from valkey repository
 ADD https://raw.githubusercontent.com/valkey-io/valkey/refs/tags/8.0.7/utils/create-cluster/create-cluster /usr/local/bin/create-cluster
