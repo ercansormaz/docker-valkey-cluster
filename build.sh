@@ -5,4 +5,3 @@ docker buildx build --platform linux/amd64,linux/arm64 -f 8.0/Dockerfile --push 
 docker buildx build --platform linux/amd64,linux/arm64 -f 8.1/Dockerfile --push -t ercansormaz/valkey-cluster:8.1 -t ercansormaz/valkey-cluster:8.1.9 .
 docker buildx build --platform linux/amd64,linux/arm64 -f 9.0/Dockerfile --push -t ercansormaz/valkey-cluster:9.0 -t ercansormaz/valkey-cluster:9.0.5 .
 docker buildx build --platform linux/amd64,linux/arm64 -f 9.1/Dockerfile --push -t ercansormaz/valkey-cluster:9.1 -t ercansormaz/valkey-cluster:9.1.1 -t ercansormaz/valkey-cluster:latest .
-docker buildx build --platform linux/amd64,linux/arm64 -f unstable/Dockerfile --push -t ercansormaz/valkey-cluster:unstable .
