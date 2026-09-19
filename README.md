@@ -41,23 +41,6 @@ This command will:
 
 ---
 
-## ⚙️ Initialize the Cluster
-
-Once the container is running, execute the following **one-time setup** command to initialize the Valkey Cluster:
-
-```bash
-docker exec -it valkey-cluster create-cluster create
-```
-
-This will:
-- Connect all 6 nodes together
-- Assign 3 master and 3 replica roles
-- Enable full cluster mode operation
-
-After this step, your cluster is ready to use!
-
----
-
 ## 🧠 Verify Cluster Status
 
 You can verify the cluster configuration by running:
@@ -87,9 +70,6 @@ docker rm -f valkey-cluster
 ---
 
 ## 🔍 Troubleshooting
-
-- Cluster not initialized?  
-  Make sure you’ve run the `create-cluster create` command once after first start.
 
 - Ports already in use?  
   Ensure that ports `30001-30006` are free before running the container.
